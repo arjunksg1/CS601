@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/styles-print.css" media="print">
+</head>
+
+<body>
+    
+    <nav id="menu">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="articles.html" class="menu-active">Articles</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        
+        <article>
+            <h2>What is Kendo UI?</h2>
+            <figure>
+                <img src="images/kendo-ui.png" alt="Kendo UI logo" height="200">
+                <figcaption>Kendo UI logo</figcaption>
+            </figure>
+            <p>Kendo UI is a JavaScript library by developed by Progress Telerik that enables you to build the UI of a
+                web app. The library provides a wide set of easy-to-use UI components such as grids, text boxes, numeric
+                text boxes, charts, etc. For example, if you want to display a table (a grid in Kendo UI) in a webpage,
+                you need three things:
+            </p>
+            <ul>
+                <li>An HTML container for the grid (such as a <code>div</code> tag),</li>
+                <li>a data source, and,</li>
+                <li>the Kendo UI grid widget.</li>
+            </ul>
+
+            <p>You begin by defining the HTML element with an id:
+            </p>
+            <p class="blockcode"><code>&lt;div id="grid"&gt;&lt;/div&gt; </code></p>
+            <p>
+                Next, you need a data source that provides the data to be displayed. This could be a REST service or
+                anything that serves data in JSON format. Or, the data can be in the HTML code itself. For example:
+            </p>
+            <p class="blockcode"><code>
+                var people = [ <br>{ firstName: "John",
+                lastName: "Smith",
+                email: "john.smith@telerik.com" },
+                <br>
+                { firstName: "Jane",
+                lastName: "Smith",
+                email: "jane.smith@telerik.com" },
+                <br>
+                { firstName: "Josh",
+                lastName: "Davis",
+                email: "josh.davis@telerik.com" },
+                <br>
+                { firstName: "Cindy",
+                lastName: "Jones",
+                email: "cindy.jones@telerik.com" }
+                <br>];
+            </code>
+        </p>
+            <p>Finally, to initialize a Kendo UI grid widget and bind it to the data source and the HTML element, simply
+                do
+                the following:
+
+            </p>
+        <p class="blockcode"><code>$("#grid").kendoGrid({
+                dataSource: people
+                });</code></p>
+            <p>This example uses jQuery but you can also write AngularJS code if you’d prefer, or even just simple
+                JavaScript (the Kendo UI library supports all of these different methods).
+
+            </p>
+            <p>To get a feel of how Kendo UI components are used, take a look at the demos: <a
+                    href="https://demos.telerik.com/kendo-ui/">https://demos.telerik.com/kendo-ui/</a>"
+
+            </p>
+            <p>Want to know more about Kendo UI? Here's a brief video:</p>
+            <iframe width="800" height="460" src="https://www.youtube.com/embed/gVu79Sh6Lpg" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </article>
+        <article>
+            <h2>What is a CMS?</h2>
+            <figure>
+                <img src="images/progress-sitefinity.png" alt="Progress Sitefinity logo" height="200">
+                <figcaption>Progress Sitefinity logo</figcaption>
+            </figure>
+            <p>A CMS, an abbreviation for Content Management System, is a software application that enables you to
+                create websites and manage its different components such as web pages, text blocks, images, videos, etc.
+                A CMS usually provides an easy-to-use interface that lets you:
+
+            </p>
+            <ul>
+                <li>Create web pages
+                </li>
+                <li>Create page layouts and page templates
+                </li>
+                <li>Create, edit, and manage content such as blogs, articles, images, videos, etc
+                </li>
+                <li>Create custom content types (a content type is a sort of a template of properties from which you can
+                    create new instances; for example, a ‘News’ content type may have properties such as title, body,
+                    author, and date, while a news article, which is an instance of the ‘News’ content type, will have
+                    specific values for each of these properties.)
+                </li>
+
+            </ul>
+            <p>Additionally, a CMS will also have programming interfaces (APIs) that allow for an enormous amount of
+                extensibility. For example, you may want data submitted through your website to be processed in a
+                specific way by the CMS. In such cases, a software developer would use the CMS's programming interfaces
+                to develop code to handle the data. For this reason, CMS's are usually built for a specific type of
+                programming platform--Java, .NET, etc.
+
+            </p>
+        </article>
+    </main>   
+    <footer>
+        <p>Copyright &#169; Arjun Sengupta. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
