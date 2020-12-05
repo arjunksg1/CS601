@@ -25,7 +25,7 @@ p, ul, li{
 #menu li>a {
     color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
@@ -196,7 +196,67 @@ footer{
     display: none;
 }
 
+input {
+    display: inline-block;
+    width: 500px;
+    margin: 10px;
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 6px;
+    border: 0.25px solid lightslategray;
+    font-family: Lato, Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+::placeholder {
+    font-size: medium;
+    font-family: Lato, Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+button {
+    display: inline-block;
+    padding: 10px;
+    background-color: lightslategrey;
+    font-family: Lato, Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    border-radius: 5px;
+    line-height: 25px;
+    cursor: pointer;
+}
 
+.grid-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1rem;
+}
 
+.subhead {
+    display: block;
+    font-size: 22px;
+    font-family: Lato, Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    width: 400px;
+    line-height: 40px;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+}
+
+.tag {
+    margin: 0 2px 0 2px;
+    padding: 8px;
+    background-color: blanchedalmond;
+    font-size: smaller;
+    border-radius: 8px;
+}
+
+.grid-cell {
+    box-shadow: 0px 5px 3px 0px gray;
+    display: block;
+}
+
+.grid-cell img{
+    border: none;
+}
