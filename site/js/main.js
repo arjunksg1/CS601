@@ -8,8 +8,14 @@ initializeKeywords();
 
 function initializeKeywords() {
     console.log("initializing keywords");
+    let keywordsInStorage = window.localStorage.getItem("keywords");
+    if (keywordsInStorage === null){
+        keywords = ["technology", "business"];
+        window.localStorage.setItem("keywords", keywords);
+    }
     keywords = window.localStorage.getItem("keywords").split(",");
-    if (keywords === null || keywords.length === 0 || keywords[0] === "") {
+    
+    if (keywords.length === 0 || keywords[0] === "") {
         keywords = ["technology", "business"];
         window.localStorage.setItem("keywords", keywords);
     }
