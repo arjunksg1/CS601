@@ -58,10 +58,12 @@ function addSymbol(){
     console.log("symbol is" + symbol);
     if (symbol === null || !symbol.match(/[A-Z]/g)){
         alert("You did not enter a valid symbol");
+        document.getElementById("stock-search").value = "";
         return;
     }
     if (doesSymbolAlreadyExist(symbol)){
         alert("Symbol already exists");
+        document.getElementById("stock-search").value = "";
         return;
     }
 
@@ -93,11 +95,13 @@ function addIfSymbolIsValid(symbol){
         console.log(response.data);
         if (response.data.chart.result === null){
             alert("Symbol " + symbol + " is invalid");
+            document.getElementById("stock-search").value = "";
         } else {
             let keywords = window.localStorage.getItem("stocks").split(",");
             keywords.shift();
             keywords.push(symbol);
             window.localStorage.setItem("stocks", keywords);
+            document.getElementById("stock-search").value = "";
             renderPage();
         }
     }).catch(function (error) {
