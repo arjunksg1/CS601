@@ -1,3 +1,4 @@
+let imagesBaseUrl = "https://arjunksg1.github.io/site/v2/images/";
 window.onload = init;
 
 function init() {
@@ -18,8 +19,12 @@ function loadTravelPictures() {
                     let img = document.createElement("img");
                     let imgDiv = document.createElement("div");
                     imgDiv.classList.add("image-container");
-                    imgDiv.id = x.href.split("/")[7].replace(/\.(jpe?g|png|gif)$/,"")+"-image";
-                    img.src = x.href;
+                    let imgUrl = imagesBaseUrl + x.href.split("/")[7];
+                    console.log(imgUrl);
+                    let imageName = x.href.split("/")[7].replace(/\.(jpe?g|png|gif)$/,"");
+                    imgDiv.id = imageName+"-image";
+                    //img.src = x.href;
+                    img.src = imgUrl;
                     img.classList.add("image");
                     imgDiv.appendChild(img);
                     let imgCtr = document.getElementById("travel-images");
@@ -27,8 +32,10 @@ function loadTravelPictures() {
                 }
                 if (x.href.match(/\.(txt|text)$/)) {
                     let fileName = x.href.split("/")[7].replace(/\.(txt|text)$/,"");
-                    let textContent = readTextFile(x.href);
-                    console.log(textContent);
+                    let fileUrl = imagesBaseUrl + x.href.split("/")[7];
+                    console.log(fileUrl);
+                    //let textContent = readTextFile(x.href);
+                    let textContent = readTextFile(fileUrl);
                     let div = document.createElement("div");
                     div.classList.add("image-caption-container");
                     let desc = document.createElement("p");
@@ -46,7 +53,7 @@ function loadTravelPictures() {
             alert('Request failed. Returned status of ' + xhr.status);
         }
     }
-    xhr.send()
+    xhr.send(null);
 }
 
 function readTextFile(file){
