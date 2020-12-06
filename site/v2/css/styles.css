@@ -6,12 +6,12 @@ main{
     background-color: white;
     margin: 0px auto auto auto;
     padding: 15px;
-    
+    height: 100%;
 }
 
-p, a, input, button {
+p, a, input, button, div {
     font-family: Lato, Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.2em;
+    font-size: 20px;
     line-height: 1.6em;
     max-width: 1000px;
     margin: auto auto 10px auto;
@@ -81,7 +81,6 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0px 5px rgb(187, 187, 187);
 }
 
-
   
 .image-container {
     position: relative;
@@ -119,4 +118,38 @@ h1, h2, h3, h4, h5, h6 {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: left;
+  }
+
+  .default-hide {
+      display:none;
+  }
+
+  #work-summary {
+    padding-bottom: 20px;    
+  }
+
+  .subhead {
+      font-size: 22px;      
+      font-family: Lato, Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .work-card-container{
+      display: grid;
+      grid-template-columns: 5% 95%;
+  }
+
+  .work-card-container .company-logo-small {
+    height:100%;     
+  }
+
+  .work-card-container .work-company-responsibilities {
+      height: 100%;
+      margin-left: 15px;
+      vertical-align: text-top;
+      padding-top: 0px;
+      margin-top:-25px;
+  }
+
+  #work-companies{
+      margin-bottom: 45px;
   }
