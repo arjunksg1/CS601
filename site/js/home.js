@@ -2,6 +2,7 @@ window.onload = init;
 
 function init(){
     displayHelloMessage();
+    
 }
 
 function displayHelloMessage(){
@@ -19,4 +20,5 @@ function displayHelloMessage(){
         4000
     );
 }
+
 

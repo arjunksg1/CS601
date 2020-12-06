@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocks</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/stocks.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
+
+</head>
+
+<body>
+    <main>
+        <nav class="top-menu">
+            <ul>
+                <li>
+                    <a href="home.html">Home</a>
+                    <a href="work.html">Work</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="articles.html">Blog</a>
+                    <a href="travel.html">Travel</a>
+                    <a href="stocks.html" class="active-menu">Stocks</a>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="stocks-container">
+            <div id="stock-input">
+                <input type="search" name="stock-search" id="stock-search" placeholder="Enter a stock symbol">
+                <button type="submit">ADD</button>
+                <div id="selected-stocks">
+                    
+                </div>
+            </div>
+            <div id="stocks-list">
+                <table>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Price</th>
+                        <th>Previous Close</th>
+                    </tr>
+                    <tr v-for="stock in stocks">
+                        <td>{{stock.symbol}}</td>
+                        <td>{{stock.regularMarketPrice}}</td>
+                        <td>{{stock.chartPreviousClose}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

@@ -6,46 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/styles-print.css" media="print">
+    <script src="js/home.js"></script>
 </head>
 
 <body>
-    <nav id="menu">
-        <ul>
-            <li ><a href="home.html" class="menu-active">Home</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="articles.html">Articles</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="travel.html">Travel</a></li>
-        </ul>
-    </nav>
-    <div id="welcome-image">
-        <figure>
-            <img src="images/programming-photo-wide.jpg" alt="Programming photo" height="400">
-        </figure>
-    </div>
-    <div id="welcome-intro">
-        <section>
-            <h2>Hello there!</h2>
-            <p> I am Arjun. I am a writer, software developer, and instructional designer. I
-                love writing code and writing about writing
-                code.</p>
-        </section>
-        <section>
-            <h2>What can I do for you?</h2>
-            <p> Web development, backend development, API
-                design, systems integration</p>
-        </section>
-        <section>
-            <h2>Technologies I am familiar with</h2>
-            <p>Java, Python, JavaScript, Angular+Typescript, REST, XML, JSON</p>
-        </section>
-    </div>
-   <footer>
-        <p>Copyright &#169; Arjun Sengupta. All rights reserved.</p>
-    </footer>
+
+    <main>
+        <nav class="top-menu">
+            <ul>
+                <li>
+                    <a href="home.html" class="active-menu">Home</a>
+                    <a href="work.html">Work</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="articles.html">Blog</a>
+                    <a href="travel.html">Travel</a>
+                    <a href="stocks.html">Stocks</a>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="home-picture">
+            <img src="images/horn-pond-3-alt.jpg" alt="horn-pond" id="home-banner-image">
+        </div>
+        <div>
+            <h1 id="message-display">Hello!</h1>
+            <div class="default-hide">Namaste!</div>
+            <div class="default-hide">Hola!</div>
+            <div class="default-hide">Bonjour!</div>
+            <div class="default-hide">Guten tag!</div>
+        </div>
+        <p>
+            Welcome to my website. My name is Arjun. That’s me up there, enjoying a pleasant hike with my daughter on a
+            Sunday morning near a local pond. I am a software developer, writer, and instructional designer. I created
+            this website as part of my coursework at Boston University.</p>
+        <p>At the time of writing, I am almost about to
+            complete a Master’s program in Software Development. The purpose of this website is to provide you with an
+            overview of my professional skills and tell you a little bit about my hobbies and interests, which including
+            blogging, traveling, reading books, and of late, learning about investing in stocks.</p>
+
+    </main>
 </body>
 
 </html>
