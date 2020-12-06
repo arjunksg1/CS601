@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function initializeKeywords() {
     let keywords = window.localStorage.getItem("stocks");
     if (keywords === null || keywords === "") {
-        window.localStorage.setItem("stocks", "TSLA,MSFT,PRGS,NIO,ACB,HEXO,BB");
+        window.localStorage.setItem("stocks", "TSLA,MSFT,PRGS,NIO,ACB");
     }
 }
 
@@ -21,7 +21,7 @@ function renderPage() {
     let vueApp = new Vue({
         el: "#stocks-list",
         data: {
-            stocks: []
+            stocks: []            
         },
         methods: {
             getStock: function (options) {
@@ -45,10 +45,64 @@ function renderPage() {
             }
           };
         
-        
-        setTimeout(function(){
+        vueApp.getStock(options);
+        /*setTimeout(function(){
             vueApp.getStock(options);
-        }, 2000);
+        }, 4000);*/
         
     });
+}
+
+function addSymbol(){
+    let symbol = document.getElementById("stock-search").value;
+    console.log("symbol is" + symbol);
+    if (symbol === null || !symbol.match(/[A-Z]/g)){
+        alert("You did not enter a valid symbol");
+        return;
+    }
+    if (doesSymbolAlreadyExist(symbol)){
+        alert("Symbol already exists");
+        return;
+    }
+
+    addIfSymbolIsValid(symbol);
+    
+    
+}
+
+function doesSymbolAlreadyExist(symbol){
+    let keywords = window.localStorage.getItem("stocks").split(",");
+    if (keywords.includes(symbol)){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function addIfSymbolIsValid(symbol){
+    let options = {
+        method: 'GET',
+        url: yahooFinanceBaseUrl,
+        params: {interval: '5m', symbol: symbol, range: '1d', region: 'US'},
+        headers: {
+          'x-rapidapi-key': rapidApiKey,
+          'x-rapidapi-host': rapidApiHost
+        }
+      };
+    axios.request(options).then(function (response) {
+        console.log(response.data);
+        if (response.data.chart.result === null){
+            alert("Symbol " + symbol + " is invalid");
+        } else {
+            let keywords = window.localStorage.getItem("stocks").split(",");
+            keywords.shift();
+            keywords.push(symbol);
+            window.localStorage.setItem("stocks", keywords);
+            renderPage();
+        }
+    }).catch(function (error) {
+        console.error(error);
+     
+    });
+    
 }

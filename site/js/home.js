@@ -17,7 +17,7 @@ function displayHelloMessage(){
             helloElement.innerHTML = messageElements[index].innerHTML;
             index++;
         },
-        4000
+        3000
     );
 }
 

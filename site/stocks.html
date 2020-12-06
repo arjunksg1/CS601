@@ -30,22 +30,24 @@
         <div id="stocks-container">
             <div id="stock-input">
                 <input type="search" name="stock-search" id="stock-search" placeholder="Enter a stock symbol">
-                <button type="submit">ADD</button>
-                <div id="selected-stocks">
-                    
-                </div>
+                <button type="submit" onclick="addSymbol()">ADD</button>
             </div>
             <div id="stocks-list">
                 <table>
+                    
                     <tr>
                         <th>Symbol</th>
                         <th>Price</th>
                         <th>Previous Close</th>
+                        <th></th>
                     </tr>
                     <tr v-for="stock in stocks">
                         <td>{{stock.symbol}}</td>
                         <td>{{stock.regularMarketPrice}}</td>
                         <td>{{stock.chartPreviousClose}}</td>
+                        <td v-if="stock.regularMarketPrice > stock.chartPreviousClose"><img src="images/up-arrow.png">
+                        </td>
+                        <td v-else><img src="images/down-arrow.png"></td>
                     </tr>
                 </table>
             </div>
