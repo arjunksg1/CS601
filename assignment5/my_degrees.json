@@ -1,0 +1,15 @@
+[
+  {
+		"school": "Boston University",
+		"program": "Masters in Software Development",
+		"type": "MS",
+		"year": 2021
+	},
+	{
+		"school": "St Joseph's College",
+		"program": "Bachelors in Commerce (minor in Computers)",
+		"type": "B.Com",
+		"year": 2003
+
+	}
+]
