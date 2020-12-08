@@ -1,0 +1,54 @@
+* {
+    font-family: Lato, Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#banner {
+    margin: -30px auto 30px auto;
+    text-align: center;
+    padding-top: 30px;
+    height: 60px;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+#message {
+    text-align: center;
+    background-color: cadetblue;
+    color: white;
+    padding: 10px;
+    width: 400px;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: larger;
+    
+}
+
+table {
+    border: 2px solid beige;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+table th {
+    width: 200px;
+    background-color: lavender;
+    padding: 5px;
+}
+
+table th:nth-child(2){
+    width:400px;
+}
+
+table td{
+    text-align: center;
+    font-size: large;
+    padding: 10px;
+}
