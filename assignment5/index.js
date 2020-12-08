@@ -15,28 +15,28 @@ function getData() {
             json.forEach(
                 element => {
                     console.log(element);
+                    // Create a row <tr> element to add to the table
                     let rowElement = document.createElement("tr");
-                    
+                    // Create <td> for school
                     let schoolElement = document.createElement("td");
                     schoolElement.innerHTML = element.school;
-                    rowElement.appendChild(schoolElement);
-
+                    rowElement.appendChild(schoolElement); // Add <td> to <tr>
+                    // Create <td> for program
                     let programElement = document.createElement("td");
                     programElement.innerHTML = element.program;
-                    rowElement.appendChild(programElement);
-                    
+                    rowElement.appendChild(programElement); // Add <td> to <tr>
+                    // Create <td> for type
                     let typeElement = document.createElement("td");
                     typeElement.innerHTML = element.type;
-                    rowElement.appendChild(typeElement);
-                    
+                    rowElement.appendChild(typeElement); // Add <td> to <tr>
+                    // Create <td> for year
                     let yearElement = document.createElement("td");
                     yearElement.innerHTML = element.year;
-                    rowElement.appendChild(yearElement);
-                    
+                    rowElement.appendChild(yearElement); // Add <td> to <tr>
+                    // Add <tr> to the table
                     degreeTableElement.appendChild(rowElement);
                 }
-            );
-            console.log(xhr.response);
+            );            
         }
         else {
             console.log('Request failed. Returned status of ' + xhr.status);
